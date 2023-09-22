@@ -52,7 +52,7 @@ public class DiffTool {
     String newPrefix =
         prefix.isBlank()
             ? field.getName()
-            : prefix + "." + field.getName(); // Indentation for nested objects
+            : prefix + "." + field.getName();
     return diff(currentValue, priorValue, newPrefix);
   }
 
@@ -103,7 +103,7 @@ public class DiffTool {
 
   private static <T> List<ChangeType> getChangeTypes(
       String prefix, Field field, List<T> prevValue, List<T> currentValue, String elem) {
-    String newPrefix; // Indentation for nested objects
+    String newPrefix;
     try {
       newPrefix =
           prefix.isBlank()
